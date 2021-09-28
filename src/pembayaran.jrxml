@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="175feb6b-02cc-4e0d-99cb-b558ac2f3738">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     tb_pembayaran.`id_pembayaran` AS tb_pembayaran_id_pembayaran,
+     tb_pembayaran.`id_penilaian` AS tb_pembayaran_id_penilaian,
+     tb_pembayaran.`id_pendaftaran` AS tb_pembayaran_id_pendaftaran,
+     tb_pembayaran.`nama` AS tb_pembayaran_nama,
+     tb_pembayaran.`total_pembayaran` AS tb_pembayaran_total_pembayaran
+FROM
+     `tb_pembayaran` tb_pembayaran]]>
+	</queryString>
+	<field name="tb_pembayaran_id_pembayaran" class="java.lang.String"/>
+	<field name="tb_pembayaran_id_penilaian" class="java.lang.String"/>
+	<field name="tb_pembayaran_id_pendaftaran" class="java.lang.String"/>
+	<field name="tb_pembayaran_nama" class="java.lang.String"/>
+	<field name="tb_pembayaran_total_pembayaran" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="92" splitType="Stretch">
+			<staticText>
+				<reportElement x="164" y="24" width="304" height="39" uuid="82563c68-58ea-46cb-b742-c2dec82c8077"/>
+				<textElement>
+					<font fontName="Times New Roman" size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN PEMBAYARAN]]></text>
+			</staticText>
+			<image>
+				<reportElement x="11" y="6" width="100" height="82" uuid="175caa0d-5405-424e-bf64-9610a47d56a6"/>
+				<imageExpression><![CDATA["logo01.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="11" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="2" y="20" width="553" height="34" forecolor="#666666" backcolor="#666666" uuid="7a28206b-38fb-4967-8045-a3878d6fe470"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="7" y="27" width="96" height="20" forecolor="#FFFFFF" uuid="d14a78c6-6dce-4ee8-a3eb-b5f75c75247d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Pembayaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="111" y="27" width="111" height="20" forecolor="#FFFFFF" uuid="1148ee3f-75b2-46c7-b8d4-ab2863f6d5b6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Penilaian]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="222" y="27" width="111" height="20" forecolor="#FFFFFF" uuid="f9c45c9c-1c56-40ef-879c-a498cb7e0fe9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID Pendafataran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="333" y="27" width="111" height="20" forecolor="#FFFFFF" uuid="c9957276-6904-48ff-b6d6-609b7450dcb8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="444" y="27" width="111" height="20" forecolor="#FFFFFF" uuid="5c3d411e-2df3-4ca7-86ba-0ee1a4f2e8a8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Pembayaran]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="29" splitType="Stretch">
+			<textField>
+				<reportElement x="7" y="0" width="96" height="20" uuid="9c4e609b-b4f0-4918-8c52-6d4ec4d7139e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_pembayaran_id_pembayaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="111" y="0" width="111" height="20" uuid="2d182749-a1ab-4f7c-97c8-0a70c7f95b37"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_pembayaran_id_penilaian}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="222" y="0" width="111" height="20" uuid="5044f34d-524b-4b98-a046-65e10b2c1731"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_pembayaran_id_pendaftaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="333" y="0" width="111" height="20" uuid="a2dd6ce1-6f2e-4287-b6f6-e64f807f3e15"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_pembayaran_nama}]]></textFieldExpression>
+			</textField>
+			<textField pattern="Rp #,##0">
+				<reportElement x="444" y="0" width="111" height="20" uuid="05a9991a-b475-43ec-ba49-1f80b20a8388"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tb_pembayaran_total_pembayaran}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="23" width="554" height="1" uuid="daacabce-b5c8-489a-91fe-fc688d97624b"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="143" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="415" y="17" width="140" height="20" uuid="62e470df-9790-49a6-a04c-002bea8cccbb"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="371" y="17" width="44" height="20" uuid="d25673e7-e1bc-4e05-90db-258702e67455"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Jakarta,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="415" y="39" width="67" height="20" uuid="b1541fdf-8107-407f-b8a7-017c770ee277"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Mengetahui]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="411" y="59" width="85" height="20" uuid="6a56defe-acf0-4de5-bc22-cd3984e21101"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Kepala Sekolah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="389" y="122" width="122" height="20" uuid="f198e3c1-7a70-4192-ae36-b494f91ccf57"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Hermina Boru Baho, M.Pd]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
